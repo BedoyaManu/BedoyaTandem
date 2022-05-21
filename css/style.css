@@ -61,6 +61,10 @@ main{
   max-width: 50%;
 }
 
+.foto:hover{
+  transform: scale(1.025);
+}
+
 .inicio{
   display: grid;
   grid-template-areas: "nov"
