@@ -61,7 +61,7 @@ main{
   max-width: 50%;
 }
 
-.foto:hover{
+.ver:hover{
   transform: scale(1.025);
 }
 
@@ -139,7 +139,7 @@ footer{
   width: 15px;
 }
 
-.container{
+.contenedor{
   padding: 5%;
 }
 
@@ -153,7 +153,7 @@ footer{
     flex-direction: row;
   }
   
-  .container{
+  .contenedor{
     display: flex;
     height: 55%;
     width: 50%;
