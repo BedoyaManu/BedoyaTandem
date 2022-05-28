@@ -56,11 +56,6 @@ main{
   max-width: 100%;
 }
 
-.foto{
-  border: 1px solid black;
-  max-width: 50%;
-}
-
 .ver:hover{
   transform: scale(1.025);
 }
@@ -83,7 +78,7 @@ div#destacados{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: left;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -143,6 +138,11 @@ footer{
   padding: 5%;
 }
 
+.card{
+  margin:20px;
+  width:16rem;
+}
+
 @media screen and (min-width:768px){
   div#destacados{
     flex-direction: row;
@@ -159,11 +159,6 @@ footer{
     width: 50%;
     flex-direction: column;
     justify-content: space-around;
-  }
-  
-  .foto{
-    border: 1px solid black;
-    height: 200px;
   }
   
   .display{
