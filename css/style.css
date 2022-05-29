@@ -143,6 +143,10 @@ footer{
   width:16rem;
 }
 
+.actual{
+  transform: translateY(-5px);
+  font-style: italic;
+}
 @media screen and (min-width:768px){
   div#destacados{
     flex-direction: row;
