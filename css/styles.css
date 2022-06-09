@@ -1,7 +1,142 @@
-header div h2 {
-  font-style: italic; }
+.border {
+  border: 1px solid black; }
 
-form input {
-  background-color: #008000; }
-  form input:hover {
-    background-color: white; }
+body {
+  background: honeydew;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: "header" "cuerpo" "footer";
+  grid-template-columns: auto;
+  grid-template-rows: 12.5vh auto 10vh;
+  row-gap: 10px;
+  column-gap: 10px; }
+  @media screen and (min-width: 1024px) {
+    body {
+      grid-template-areas: "header header header header" ". cuerpo cuerpo ." "footer footer footer footer";
+      grid-template-columns: 1fr 2fr 2fr 1fr;
+      grid-template-rows: 12.5vh auto 10vh; } }
+  body header {
+    grid-area: header;
+    background-color: beige;
+    display: grid;
+    grid-template-areas: "logo" "nav";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center; }
+    @media screen and (min-width: 1024px) {
+      body header {
+        grid-area: header;
+        background-color: beige;
+        display: grid;
+        grid-template-areas: ". logo ." ". nav .";
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center; } }
+  body nav {
+    grid-area: nav; }
+    body nav ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around; }
+      body nav ul .actual {
+        transform: translateY(-5px);
+        font-style: italic; }
+      body nav ul .nav-link {
+        color: black; }
+        body nav ul .nav-link:hover {
+          color: grey; }
+      @media screen and (min-width: 1024px) {
+        body nav ul {
+          justify-content: space-between; } }
+  body div#logoHeader {
+    grid-area: logo;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+  body main {
+    grid-area: cuerpo;
+    max-width: 100%; }
+    body main .inicio {
+      display: grid;
+      grid-template-areas: "nov" "dest";
+      grid-template-columns: auto;
+      grid-template-rows: 30vh auto; }
+    body main div#novedades {
+      grid-area: nov;
+      width: 100%; }
+    body main div#destacados {
+      grid-area: dest;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap; }
+      @media screen and (min-width: 768px) {
+        body main div#destacados {
+          flex-direction: row;
+          flex-wrap: wrap; } }
+    body main .fit {
+      width: 100%;
+      height: 100%; }
+    body main .form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+    body main .icon {
+      width: 15px; }
+    body main .card {
+      margin: 20px;
+      width: 16rem; }
+  body .productos {
+    display: flex;
+    flex-direction: column; }
+    @media screen and (min-width: 768px) {
+      body .productos {
+        display: grid;
+        grid-template-areas: "categ prod";
+        grid-template-columns: 25% auto; } }
+  @media screen and (min-width: 768px) {
+    body div#categorias {
+      grid-area: categ;
+      padding: 40px; } }
+  @media screen and (min-width: 768px) {
+    body div#productos {
+      grid-area: prod;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap; } }
+  body footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-items: center;
+    justify-content: space-around; }
+    body footer #logoChico {
+      width: 100px; }
+  body .centro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+    @media screen and (min-width: 768px) {
+      body .centro {
+        flex-direction: row; } }
+  body .contenedor {
+    padding: 5%; }
+    @media screen and (min-width: 768px) {
+      body .contenedor {
+        display: flex;
+        flex-direction: column;
+        height: 55%;
+        width: 50%;
+        justify-content: space-around; } }
+  body .ver:hover {
+    transform: scale(1.025); }
+  body img#nosotras {
+    max-width: 100%; }

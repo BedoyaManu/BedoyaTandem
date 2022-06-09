@@ -1,18 +1,196 @@
-$color-fondo: #008000;
+@import 'mixins';
 
-header{
-  div{
-    h2{
-      font-style: italic;
-    }
-  }
+.border {
+  border: 1px solid black;
 }
 
-form{
-  input{
-    background-color: $color-fondo;
-    &:hover{
-      background-color: white;
+body {
+  background: honeydew;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: "header"
+    "cuerpo"
+    "footer";
+  grid-template-columns: auto;
+  grid-template-rows: 12.5vh auto 10vh;
+  row-gap: 10px;
+  column-gap: 10px;
+
+  @media screen and (min-width: 1024px) {
+    grid-template-areas: "header header header header"
+      ". cuerpo cuerpo ."
+      "footer footer footer footer";
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 12.5vh auto 10vh;
+  }
+
+  header {
+    grid-area: header;
+    background-color: beige;
+    display: grid;
+    grid-template-areas: "logo"
+      "nav";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+
+    @media screen and (min-width: 1024px) {
+      grid-area: header;
+      background-color: beige;
+      display: grid;
+      grid-template-areas: ". logo ."
+        ". nav .";
+      grid-template-columns: 1fr 4fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      align-items: center;
     }
+  }
+
+  nav {
+    grid-area: nav;
+
+    ul {
+      list-style-type: none;
+      @include flex-row;
+      justify-content: space-around;
+
+      .actual {
+        transform: translateY(-5px);
+        font-style: italic;
+      }
+
+      .nav-link {
+        color: black;
+        &:hover{
+          color:grey;
+        }
+      }
+
+
+      @media screen and (min-width: 1024px) {
+        justify-content: space-between;
+      }
+    }
+  }
+
+  div#logoHeader {
+    grid-area: logo;
+    @include flex-row;
+    justify-content: space-between;
+  }
+
+  main {
+    grid-area: cuerpo;
+    max-width: 100%;
+
+    .inicio {
+      display: grid;
+      grid-template-areas: "nov"
+        "dest";
+      grid-template-columns: auto;
+      grid-template-rows: 30vh auto;
+    }
+
+    div#novedades {
+      grid-area: nov;
+      width: 100%;
+    }
+
+    div#destacados {
+      grid-area: dest;
+      @include flex-column;
+      @include centrar;
+      flex-wrap: wrap;
+
+      @media screen and (min-width:768px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+
+    .fit {
+      width: 100%;
+      height: 100%;
+    }
+
+    .form {
+      @include flex-column;
+      justify-content: center;
+    }
+
+    .icon {
+      width: 15px;
+    }
+
+    .card {
+      margin: 20px;
+      width: 16rem;
+    }
+
+  }
+
+  .productos {
+    @include flex-column;
+
+    @media screen and (min-width:768px) {
+      display: grid;
+      grid-template-areas: "categ prod";
+      grid-template-columns: 25% auto;
+
+    }
+  }
+  div#categorias {
+    @media screen and (min-width:768px){
+      grid-area: categ;
+      padding: 40px;
+    }
+  }
+
+  div#productos{
+    @media screen and (min-width:768px){
+      grid-area: prod;
+      @include flex-row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  footer {
+    grid-area: footer;
+    @include flex-row;
+    @include centrar;
+
+
+    #logoChico {
+      width: 100px;
+    }
+  }
+
+  .centro {
+    @include flex-column;
+    @include centrar;
+
+    @media screen and (min-width:768px) {
+      flex-direction: row;
+    }
+  }
+
+  .contenedor {
+    padding: 5%;
+
+    @media screen and (min-width:768px) {
+      @include flex-column;
+      height: 55%;
+      width: 50%;
+      justify-content: space-around;
+    }
+  }
+
+  .ver:hover{
+    transform: scale(1.025);
+  }
+
+  img#nosotras{
+    max-width: 100%;
   }
 }

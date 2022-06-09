@@ -8,7 +8,6 @@
 body{
   background: white;
   min-height: 100vh;
-  font-family: 'Radio Canada', sans-serif;
   display: grid;
   grid-template-areas: "header"
   "cuerpo"
@@ -41,7 +40,7 @@ nav{
 div#logoHeader{
   grid-area: logo;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 ul{
@@ -65,7 +64,7 @@ main{
   grid-template-areas: "nov"
   "dest";
   grid-template-columns: auto;
-  grid-template-rows: 40vh auto;
+  grid-template-rows: 30vh auto;
 }
 
 div#novedades{
@@ -85,10 +84,6 @@ div#destacados{
 .fit{
   width: 100%;
   height: 100%;
-}
-
-.display{
-  margin: 15px;
 }
 
 footer{
@@ -180,7 +175,7 @@ footer{
   div#productos{
     grid-area: prod;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
   }  
@@ -189,13 +184,13 @@ footer{
 @media screen and (min-width: 1024px) {
   body{
     grid-template-areas: "header header header header"
-    "publicidad1 cuerpo cuerpo publicidad2"
+    ". cuerpo cuerpo ."
     "footer footer footer footer";
     grid-template-columns: 1fr 2fr 2fr 1fr;
     grid-template-rows: 12.5vh auto 10vh;
   }
   
-  .pub1{
+/*   .pub1{
     grid-area: publicidad1;
     display: block;
   }
@@ -203,7 +198,7 @@ footer{
   .pub2{
     grid-area: publicidad2;
     display: block;
-  }
+  } */
 
   header{
     grid-area: header;
