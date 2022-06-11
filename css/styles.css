@@ -22,7 +22,8 @@ body {
     grid-template-areas: "logo" "nav";
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    align-items: center; }
+    align-items: center;
+    z-index: 1; }
     @media screen and (min-width: 1024px) {
       body header {
         grid-area: header;
@@ -42,7 +43,6 @@ body {
       align-items: center;
       justify-content: space-around; }
       body nav ul .actual {
-        transform: translateY(-5px);
         font-style: italic; }
       body nav ul .nav-link {
         color: black; }
