@@ -5,7 +5,7 @@
 }
 
 body {
-  background: honeydew;
+  background: whitesmoke;
   min-height: 100vh;
   display: grid;
   grid-template-areas: "header"
@@ -131,24 +131,13 @@ body {
 
   .productos {
     @include flex-column;
-
-    @media screen and (min-width:768px) {
-      display: grid;
-      grid-template-areas: "categ prod";
-      grid-template-columns: 25% auto;
-
-    }
-  }
-  div#categorias {
-    @media screen and (min-width:768px){
-      grid-area: categ;
-      padding: 40px;
-    }
   }
 
   div#productos{
+    @include flex-column;
+    @include centrar;
+
     @media screen and (min-width:768px){
-      grid-area: prod;
       @include flex-row;
       justify-content: center;
       flex-wrap: wrap;
@@ -180,6 +169,7 @@ body {
 
     @media screen and (min-width:768px) {
       @include flex-column;
+      padding: 2.5%;
       height: 55%;
       width: 50%;
       justify-content: space-around;
