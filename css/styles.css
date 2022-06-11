@@ -33,7 +33,8 @@ body {
         grid-template-rows: 1fr 1fr;
         align-items: center; } }
   body nav {
-    grid-area: nav; }
+    grid-area: nav;
+    background-color: beige; }
     body nav ul {
       list-style-type: none;
       display: flex;
@@ -84,7 +85,7 @@ body {
     body main .icon {
       width: 15px; }
     body main .card {
-      margin: 20px;
+      margin: 15px;
       width: 16rem; }
   body .productos {
     display: flex;
