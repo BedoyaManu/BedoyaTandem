@@ -81,10 +81,6 @@ body {
     body main .fit {
       width: 100%;
       height: 100%; }
-    body main .form {
-      display: flex;
-      flex-direction: column;
-      justify-content: center; }
     body main .icon {
       width: 15px; }
     body main .card {
@@ -92,7 +88,9 @@ body {
       width: 16rem; }
   body .productos {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
   body div#productos {
     display: flex;
     flex-direction: column;
@@ -110,7 +108,6 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    align-items: center;
     justify-content: space-around; }
     body footer #logoChico {
       width: 100px; }
@@ -118,16 +115,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around; }
+    justify-content: center; }
     @media screen and (min-width: 768px) {
       body .centro {
         flex-direction: row; } }
   body .contenedor {
+    margin: 5%;
     padding: 5%; }
     @media screen and (min-width: 768px) {
       body .contenedor {
         display: flex;
         flex-direction: column;
+        align-items: auto;
+        justify-content: space-around;
         padding: 2.5%;
         height: 55%;
         width: 50%;

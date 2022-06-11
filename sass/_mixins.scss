@@ -1,12 +1,8 @@
-@mixin flex-row{
+@mixin flex($direction,$align,$justify){
     display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-@mixin flex-column{
-    display: flex;
-    flex-direction: column;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
 }
 
 @mixin centrar{
